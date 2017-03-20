@@ -33,7 +33,7 @@ public class OilCraftBlockHandler {
 			blocks.add(block);
 	}
 	
-	public static ArrayList<OilCraftBlock> getBlocks(){
+	public final static ArrayList<OilCraftBlock> getBlocks(){
 		return blocks;
 	}
 

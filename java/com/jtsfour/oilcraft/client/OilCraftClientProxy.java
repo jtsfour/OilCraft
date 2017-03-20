@@ -10,6 +10,7 @@ public class OilCraftClientProxy extends OilCraftCommonProxy {
 	public void preInit(){
 		super.preInit();
 		OilCraftRenderHandler.registerBlockModels();
+		OilCraftRenderHandler.registerItemModels();
 	}
 	
 	@Override
