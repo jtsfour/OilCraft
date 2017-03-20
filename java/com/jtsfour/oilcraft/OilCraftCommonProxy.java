@@ -1,8 +1,10 @@
 package com.jtsfour.oilcraft;
 
 import com.jtsfour.oilcraft.block.OilCraftBlockHandler;
+import com.jtsfour.oilcraft.event.OilCraftEventHandler;
 import com.jtsfour.oilcraft.item.OilCraftItemHandler;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class OilCraftCommonProxy {
@@ -14,6 +16,8 @@ public class OilCraftCommonProxy {
 	public void preInit(){
 		OilCraftBlockHandler.preInit();
 		OilCraftItemHandler.preInit();
+		OilCraftEventHandler handler = new OilCraftEventHandler();
+		MinecraftForge.EVENT_BUS.register(handler);
 	}
 	
 	public void init(){
